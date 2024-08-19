@@ -8,5 +8,5 @@ elif (c=='-'):
   print("The sum of",a,"and",b,"is",a-b)
 elif (c=='*'):
   print("The sum of",a,"and",b,"is",a*b)
-elif (c=='d'):
+elif (c=='/'):
   print("The sum of",a,"and",b,"is",a/b)      
