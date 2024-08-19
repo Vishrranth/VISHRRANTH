@@ -4,9 +4,9 @@ b=int(input("Enter another number"))
 c=input("Enter what operation you want to perform(+,-,*,/)")
 if (c=='+'):
   print("The sum of",a,"and",b,"is",a+b)
-elif (c=='+'):
-  print("The sum of",a,"and",b,"is",a+b)
-elif (c=='+'):
-  print("The sum of",a,"and",b,"is",a+b)
-elif (c=='+'):
-  print("The sum of",a,"and",b,"is",a+b)      
+elif (c=='-'):
+  print("The sum of",a,"and",b,"is",a-b)
+elif (c=='*'):
+  print("The sum of",a,"and",b,"is",a*b)
+elif (c=='d'):
+  print("The sum of",a,"and",b,"is",a/b)      
