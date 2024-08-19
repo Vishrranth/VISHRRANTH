@@ -1,0 +1,74 @@
+import random
+a=1
+roundNumber=0
+userScore=0
+CompScore=0
+while(a==1):
+  user=input("Choose rock,paper or scissors \n")
+  choices=['rock','paper','scissors']
+  CompMove=random.choice(choices)
+  print(CompMove)
+  
+
+  if (user not in choices):
+    print("Enter a valid move")
+
+  if (user==CompMove):
+    print("Its a tie")
+    roundNumber+=1
+    a=int(input("Do you want to continue(1-yes/0-No)"))
+
+
+  elif (user=='rock' and  CompMove=='scissors'):
+    print("you win")
+    userScore+=1
+    roundNumber+=1
+    a=int(input("Do you want to continue(1-yes/0-No)"))
+
+
+  elif (user=='scissors' and CompMove=='rock'):
+    print("Computer wins")
+    CompScore+=1
+    roundNumber+=1  
+
+  elif(user=='paper' and  CompMove=='rock'):
+    print("you Win")
+    userScore+=1
+    roundNumber+=1
+    a=int(input("Do you want to continue(1-yes/0-No)"))
+
+
+  elif (user=='rock' and  CompMove=='paper'):
+    print("Computer wins")
+    CompScore+=1
+    roundNumber+=1  
+    a=int(input("Do you want to continue(1-yes/0-No)"))
+
+
+  elif(user=='scissors' and  CompMove=='paper'):
+    print("you Win")
+    userScore+=1
+    roundNumber+=1
+    a=int(input("Do you want to continue(1-yes/0-No)"))
+  
+
+  elif (user=='paper' and CompMove=='scissors'):
+    print("Computer wins")
+    CompScore+=1
+    roundNumber+=1    
+    a=int(input("Do you want to continue(1-yes/0-No)"))
+
+if (userScore>CompScore):
+  print("Your score",userScore,end="\n")
+  print("Computer score",CompScore,end='\n')
+  print("you win!!")
+else:
+  print("Your score",userScore,end="\n")
+  print("Computer score",CompScore,end='\n')
+  print("Computer Wins. Better luck next time!")  
+ 
+
+        
+    
+
+    
