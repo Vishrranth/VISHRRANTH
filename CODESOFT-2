@@ -1,0 +1,27 @@
+import string
+import random
+len=int(input("Enter the lenght of the password"))
+characterset=""
+print("""Choose from the follwoing set
+      1)letters
+      2)digits
+      3)special characters
+      4)exit""")
+while(True):
+  choice=int(input("Enter your choice"))
+  if choice==1:
+    characterset+=string.ascii_letters
+  elif choice==2:
+    characterset+=string.digits
+  elif choice==3:
+    characterset+=string.punctuation
+  elif choice==4:
+    break
+  else:
+    print("Enter a valid input")     
+passlst=[]
+for i in range(len):
+  randomchoice=random.choice(characterset)
+  passlst.append(randomchoice)
+for i in passlst:
+  print(i,end='')   
