@@ -1,0 +1,83 @@
+a=True
+
+contactinfo={
+  "John Doe":[5551234145,'johndoe@example.com','123 Elm Street, Springfield, IL 62701'],
+  "Jane Smith":[5555678732,'janesmith@example.com','456 Oak Avenue, Springfield, IL 62702'],
+  "Michael Johnson":[5559101456,'michael.johnson@example.com','789 Pine Road, Springfield, IL 62703'],
+  "Emily Davis":[5551123432,'emilydavis@example.com','101 Maple Lane, Springfield, IL 62704'],
+  "David Wilson":[555334445,'davidwilson@example.com','202 Birch Blvd, Springfield, IL 62705']
+}
+while(a):
+
+    print(""""What operation do you want to perform
+          1)Add contant
+          2)View contact
+          3)search contant
+          4)update contact
+          5)delete contact""")
+
+    choice=int(input("Enter choice"))
+    if choice==1:
+      name=input("Enter name")
+      phone=int(input("Enter the phone number"))
+      address=input("Enter the address")
+      email=input("Enter emial address of the person")
+      lst=[phone,email,address]
+      contactinfo[name]=lst
+      print(contactinfo)
+    elif choice==2:
+      lstname=[] 
+      for i in contactinfo:
+        lstname.append(i)
+        lstname.append(contactinfo[i][0])
+      print("Contact details with names and phone numbers",lstname)
+    elif choice==3:
+      search=input("Enter the phone number or name")
+      if search==int():
+        for i in contactinfo:
+          if i[0]==search:
+            print(i)
+            print(contactinfo[i])    
+      elif search==str():
+        for i in contactinfo:
+          if i==search:
+            print(i)
+            print(contactinfo[i])
+      else:
+        print("Data not present")
+    elif choice==4:
+      name=input("Enter the name of the person whose detail needs to be changed")
+      print("""which info do you want to update
+              1)Phone number
+              2)Email
+              3)Address""")      
+      choice2=int(input("Enter choice"))
+      if choice==1:
+        newNum=int(input("Enter the new phone number"))
+        for i in contactinfo:
+          if i==name:
+            contactinfo[i][0]=newNum
+        print("Updated")
+      elif choice==2:
+        newMail=input("Enter a new email address")
+        for i in contactinfo:
+          if i==name:
+            contactinfo[i][1]=newMail
+        print("Updated")
+      else:
+        newAd=input("ENter the new address")
+        for i in contactinfo:
+          if i==name:
+            contactinfo[i][2]=newAd
+        print("updated")          
+    elif choice==5:
+      name=input("Enter the name of the person account needs to be deleted")
+      contactinfo.pop(name)
+      print("Done")       
+    a=input("Do you want to continue?(1-yes/0-no)")
+    
+
+
+
+
+
